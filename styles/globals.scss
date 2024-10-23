@@ -1,0 +1,689 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+@import "fonts";
+@import "theme";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden !important;
+  font-family: var(--primary-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+header {
+  flex: 0 0 auto;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+.Custom_navlink {
+  // hover:text-black
+  @apply inline-flex no-underline items-center text-sm font-medium text-gray-400;
+}
+.dropdown {
+  @apply flex flex-col absolute bg-white min-w-20 top-11;
+}
+
+/* Box Shadow */
+.box_shadow {
+  box-shadow: 0px 2px 3px #a5b2c4, 0px 5px 6px rgba(190, 197, 204, 0.46);
+}
+/* Box Shadow */
+
+/* Button CSS */
+
+.app-btn {
+  @apply font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 duration-300 focus:outline-none focus:ring-4 focus:ring-gray-300;
+
+  &.primary {
+    @apply text-white text-gray-800 bg-gray-400 hover:bg-gray-900 hover:text-white;
+  }
+
+  &.secondary {
+    @apply text-black hover:bg-gray-200;
+  }
+}
+
+/* Button CSS */
+
+// Container
+
+.custom_Container {
+  @apply mx-auto lg:py-16 md:py-16 sm:py-4 py-4 lg:px-8 md:px-8 bg-[#f5f7fa];
+}
+
+.custom_Inner_Container {
+  @apply lg:max-w-7xl md:max-w-4xl mx-auto shadow-xl bg-white;
+}
+
+// subNavBar
+
+.sub_Navbar {
+  @apply flex gap-3 py-4 pl-11 w-full;
+}
+
+.sub_Navbar_Link {
+  @apply text-gray-400 font-semibold pr-3 h-9 border-r-2 no-underline flex items-center;
+}
+
+.sub_Navbar_Current_Page {
+  @apply font-normal flex items-center;
+}
+
+// horizontal Line
+
+.horizontal_Line {
+  @apply border w-full border-gray-200;
+}
+
+// Header
+
+.header_Top {
+  @apply bg-white border-gray-200 max-w-screen-xl w-full flex flex-wrap items-center justify-between mx-auto;
+}
+
+.header_Top_Sub {
+  @apply hidden w-full md:block md:w-auto;
+}
+
+.header_Link {
+  @apply flex items-center px-4 cursor-pointer border-r-2 no-underline;
+}
+
+.header_Label {
+  @apply text-slate-500 font-medium hover:text-black flex items-center;
+}
+
+.header_Account_Section {
+  @apply flex items-center relative px-4 cursor-pointer border-r-2 hover:shadow-xl transition-shadow duration-300 ease-in-out;
+}
+
+.header_Account_Label {
+  @apply flex items-center text-slate-500 font-medium;
+}
+
+.header_Account_Box {
+  @apply absolute top-[64px] right-[0px] w-60 shadow-xl bg-white p-6;
+}
+
+.header_Account_LogOut {
+  @apply py-2.5 px-5 w-full me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-red-400 hover:text-[#ccc] focus:z-10 focus:ring-4 focus:ring-gray-100;
+}
+
+.header_Bell_Icon {
+  @apply flex items-center mr-4 bg-[#cccccc] w-9 h-9 rounded-full justify-center relative cursor-pointer;
+}
+
+.header_Notification_Count {
+  @apply flex rounded-full top-[-16px] right-[27px] relative text-white bg-black text-xs w-6 h-4 justify-center;
+}
+
+.header_ordered_Summary {
+  @apply flex items-center bg-[#cccccc] p-2 rounded-full;
+}
+
+.header_ordered_Total_Label {
+  @apply text-slate-500 px-4 font-medium pb-2 text-xs;
+}
+
+.header_ordered_Total_Button {
+  @apply flex items-center bg-black text-white w-9 h-9 justify-center rounded-full cursor-pointer;
+}
+
+.header_LogIn_SignUp {
+  @apply font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white;
+}
+
+.header_NavBar {
+  @apply space-x-1 md:space-x-2 rtl:space-x-reverse uppercase cursor-pointer h-[4.375rem] flex;
+}
+
+.header_NavBar_Link {
+  @apply inline-flex items-center pt-6 px-5 pb-5 hover:border-b-2;
+}
+
+.header_Search_Box {
+  @apply block w-full pl-4 pr-10 py-2 text-sm text-gray-900 border border-gray-300  bg-gray-50 focus-visible:outline-none focus:ring-blue-500 focus:border-blue-500;
+}
+
+.header_Search_Box_Label {
+  @apply absolute inset-y-0 end-0 flex items-center pr-3 pointer-events-none;
+}
+
+.header_Search_Icon {
+  @apply w-4 h-4 text-gray-500;
+}
+
+.header_Search_Label {
+  @apply mb-2 text-sm font-medium text-gray-900 sr-only;
+}
+
+.footer_Main {
+  @apply w-full max-w-screen-xl mx-auto p-4 md:py-8;
+}
+
+.footer_Sub_Main {
+  @apply sm:flex sm:items-center sm:justify-between;
+}
+
+.footer_Logo {
+  @apply flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse;
+}
+
+.footer_Icon {
+  @apply flex flex-row justify-evenly text-3xl;
+}
+// Home Page
+
+.home_Main_Container {
+  @apply min-h-screen;
+}
+
+.home_Sub_Main_Container {
+  @apply bg-[#f5f7fa] border-gray-200;
+}
+
+.home_Header_Container {
+  @apply max-w-screen-xl mx-auto py-4;
+}
+
+.home_Image {
+  @apply w-full md:mt-9 md:mb-9;
+}
+
+.top_Product_Section {
+  @apply flex flex-col md:flex-row gap-6 mb-20;
+}
+
+.top_Product_Card {
+  @apply w-full md:w-1/2 lg:w-1/3 mt-3 mb-3;
+}
+
+.top_Product_Image {
+  @apply w-full h-auto mb-6;
+}
+
+.top_Product_Title_Box {
+  @apply w-full text-center uppercase border-black bg-white border-2 border-opacity-50 py-2;
+}
+
+.top_Product_Title {
+  @apply font-medium text-[15px] no-underline bg-white;
+}
+
+.home_horizontalLine {
+  @apply max-w-screen-xl mx-auto h-px border;
+}
+
+.home_product2 {
+  @apply max-w-screen-xl flex flex-wrap items-center justify-between mx-auto;
+}
+.home_product2_section {
+  @apply flex flex-col md:flex-row gap-6 mb-20;
+}
+.home_product_linkbtn {
+  @apply border-2 border-black border-opacity-50;
+}
+
+.home_main-div {
+  @apply max-w-screen-xl mx-auto;
+}
+
+.latest_Product {
+  @apply mt-10 flex justify-between;
+}
+
+.latest_Product_Link {
+  @apply text-[17px] bg-white no-underline flex items-center home_product_linkbtn p-2 mb-5;
+}
+
+.bottom_Product_Section {
+  @apply max-w-screen-xl flex flex-wrap items-center justify-between mx-auto;
+}
+
+// Card Page
+
+.card_Main {
+  @apply bg-[white] h-auto border-2 border-transparent rounded-md p-4 shadow-[0_3px_10px_rgb(0,0,0,0.2)];
+  transition: border-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card_Main:hover {
+  border-color: black;
+  box-shadow: 0px 5px 20px 6px rgba(190, 190, 190, 0.473);
+}
+
+.card_Details_div {
+  @apply flex flex-col text-wrap text-center pb-2 pt-2;
+}
+
+.card_Product_Name {
+  @apply min-h-16 overflow-hidden font-medium text-xl text-left font-sans no-underline capitalize text-wrap;
+}
+
+.card_Product_Price {
+  @apply w-full text-left text-lg text-[#657285] no-underline;
+}
+
+// sub Category Page Design
+
+.sub_Main {
+  @apply px-11;
+}
+
+.button_Group {
+  @apply flex w-full flex-row flex-wrap justify-start text-sm content-start items-center;
+}
+
+.button {
+  @apply bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 mr-2 border border-gray-400 rounded shadow;
+}
+
+.filter_Div {
+  @apply relative border border-gray-400 rounded my-5 lg:w-2/12 md:w-2/12 sm:w-7/12 w-7/12;
+}
+
+.filter_Div_Select {
+  @apply w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm  outline-none appearance-none focus:border-indigo-600;
+}
+
+.products_Container {
+  @apply w-full lg:gap-12 xl:gap-12 md:gap-11 sm:gap-9 gap-8 pb-10 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1;
+}
+
+// cart page
+
+.header_Div {
+  @apply flex w-full justify-between p-8;
+}
+
+.delete_All_Button {
+  @apply text-red-500 flex items-center cursor-pointer;
+}
+
+.cart_Table {
+  @apply table-auto w-full;
+}
+
+.table_Header {
+  @apply w-full h-16 border-b-2 border-t-2 bg-[#f5f7fa] text-xs;
+}
+
+.table_Header_Content1 {
+  @apply text-center font-normal uppercase;
+}
+
+.table_Input {
+  @apply border-2 h-10 w-28 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-300 text-center;
+}
+
+.table_Update_Button {
+  @apply bg-[#D6DFEC] text-[#657285] rounded-[5px] px-4 py-2 absolute ml-[8.25rem] transition hover:bg-black hover:text-white delay-100 ease-in-out;
+}
+
+.delete_One_Button {
+  @apply border cursor-pointer text-red-500 text-xl border-black border-solid h-10 w-9 flex items-center justify-center;
+}
+
+.order_Summary_Section {
+  @apply flex w-full justify-between mx-5 my-6 pb-5 items-center;
+}
+
+.order_Summary {
+  @apply flex bg-[#ECF2FA] gap-[18px] py-4 px-8 mb-4;
+}
+
+.order_Summary_Title {
+  @apply block h-6 text-xs font-semibold uppercase text-[#657285];
+}
+
+.order_Summary_Data {
+  @apply text-sm font-medium text-black;
+}
+
+.save_For_Latter_Button {
+  @apply bg-transparent text-sm py-2 px-4 border border-black border-solid mr-2 no-underline;
+}
+
+.next_Button {
+  @apply bg-black text-white text-sm font-bold py-4 px-7 mr-11 no-underline;
+}
+
+// Contact US
+
+.contact_Title {
+  @apply text-2xl font-normal m-5 pl-6 pb-12;
+}
+
+.contact_Main {
+  @apply flex flex-col md:flex-row lg:flex-row m-5 pl-6 pb-8;
+}
+
+.contact_Label {
+  @apply block text-gray-700 text-sm my-2;
+}
+
+.contact_Input_Field {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-4 focus:ring-blue-300 my-2;
+}
+
+.contact_Button {
+  @apply bg-transparent text-black font-semibold py-2 px-4 border border-black rounded transition duration-300 ease-in-out hover:bg-black hover:text-white hover:border-transparent;
+}
+
+.contact_Location_Div {
+  @apply lg:m-5 md:m-5 -ml-2 flex justify-start flex-col;
+}
+
+.contact_Addres {
+  @apply text-black text-base text-center font-bold;
+}
+
+.contact_Country {
+  @apply block text-gray-700 text-sm ml-3 my-2;
+}
+
+// Login page
+
+.login_Labless {
+  @apply block text-gray-700 text-sm my-2;
+}
+
+.login_Input {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none my-2 focus:ring-4 focus:ring-blue-300;
+}
+
+.login_CheackBox_Div {
+  @apply md:w-2/3 block text-gray-500 font-bold my-2;
+}
+
+.login_Button {
+  @apply w-full bg-transparent text-black font-semibold py-2 px-4 border border-black rounded my-2 transition duration-300 ease-in-out hover:bg-black hover:text-white hover:border-transparent;
+}
+
+.forgot_Button {
+  @apply flex justify-center my-2 no-underline;
+}
+
+.one_Time_Login {
+  @apply my-3 font-medium text-sm;
+}
+
+.sign_UP_Button {
+  @apply w-full bg-transparent my-2 text-black font-semibold py-2 px-4 border border-black rounded;
+}
+
+// product Details
+
+.product_Details_Main_Div {
+  @apply flex flex-col justify-between md:flex-row lg:flex-row m-5 lg:pl-6 md:pl-6 pb-2;
+}
+
+.product_Details_Color {
+  @apply block text-gray-700 text-sm;
+}
+
+.product_Details_Data {
+  @apply flex justify-start flex-col lg:w-6/12 md:w-6/12 lg:pt-0 md:pt-0 pt-2;
+}
+
+.product_Name {
+  @apply text-3xl font-normal pb-6;
+}
+
+.product_Availability {
+  @apply text-xl font-normal pb-3;
+}
+
+.product_Details_Label {
+  @apply block text-gray-500 text-xs uppercase;
+}
+
+.product_Details_Value {
+  @apply block no-underline text-gray-700 font-normal text-base;
+}
+
+.product_Details_Login_Label {
+  @apply block italic text-gray-700 no-underline leading-6 text-base font-medium mt-3;
+}
+
+.description_Section {
+  @apply m-5 lg:pl-6 md:pl-6 pb-9;
+}
+
+.product_Details_Description {
+  @apply leading-6 pl-7 text-gray-700 font-normal text-base;
+  ul {
+    li {
+      @apply list-disc;
+    }
+  }
+}
+
+.product_Details_Price_Details {
+  @apply text-[#657285] text-sm flex w-full mt-5 gap-3;
+}
+
+.product_Details_Price_Select_Div {
+  @apply relative border shadow appearance-none border-gray-200 rounded mt-1 mb-5 focus:outline-none focus:ring-4 focus:ring-blue-300;
+}
+
+.product_Details_Price_Select {
+  @apply w-full border bg-transparent px-1 py-1 font-sans text-sm font-normal transition-all placeholder-shown:border text-[#657285];
+}
+
+.product_Details_Quantity {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-4 focus:ring-blue-300 mt-1 mb-5;
+}
+
+.product_Details_Button {
+  @apply bg-transparent h-12 w-fit text-black no-underline text-xl flex items-center px-4 border border-black border-solid;
+}
+// confirm order
+
+.confirm_Order_Main_Div {
+  @apply m-5 pl-6 pb-8 lg:w-6/12 md:w-6/12 text-sm;
+}
+
+.confirm_Order_Title {
+  @apply text-3xl font-normal m-5 pl-6 pb-12;
+}
+
+.confirm_Order_Select_Box {
+  @apply relative border shadow appearance-none border-gray-200 rounded my-5 focus:outline-none focus:ring-4 focus:ring-blue-300;
+}
+
+.confirm_Order_Select_Fild {
+  @apply w-full border bg-transparent px-1 py-1 font-sans text-sm font-normal transition-all placeholder-shown:border text-[#657285];
+}
+
+.confirm_Order_Addresses_Box {
+  @apply grid grid-cols-2 gap-6 w-full text-[#657285];
+}
+
+.confirm_Order_Disabled {
+  @apply h-[3rem] pl-[1rem] mt-3 bg-[#e9ecef] border border-gray-300;
+}
+
+.confirm_Order_Input {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-4 focus:ring-blue-300 my-5;
+}
+
+.confirm_Order_Bottom {
+  @apply mt-10 py-9 flex justify-end;
+}
+
+.confirm_Order_Back {
+  @apply bg-transparent no-underline font-bold text-sm flex items-center px-4 border border-black border-solid mr-2;
+}
+
+.confirm_Order_Send {
+  @apply bg-black no-underline text-white text-sm font-bold py-4 px-7 mr-11;
+}
+
+.confirm_Order_Card_Main {
+  @apply relative h-11 w-full min-w-[200px];
+}
+
+.confirm_Order_Card_Button {
+  @apply bg-black text-white text-sm font-bold w-full h-10 mt-4 no-underline;
+}
+
+// PagiNation ----------------------------------------------------------------
+
+.pagination_Left {
+  @apply flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700;
+}
+
+.pagination_Right {
+  @apply flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700;
+}
+
+.pagination_Button_Active {
+  @apply z-10 flex items-center justify-center px-4 h-10 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700;
+}
+
+.pagination_Button_Inactive {
+  @apply flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700;
+}
+
+.loaderMain {
+  z-index: 1;
+
+  @apply fixed top-0 left-0 w-full h-full bg-gray-500 bg-opacity-50 flex justify-center items-center;
+}
+
+.agentList {
+  z-index: 1;
+
+  @apply fixed top-0 left-0 w-full h-full bg-gray-500 bg-opacity-50 flex justify-center items-center;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid aliceblue;
+  border-right-color: black;
+  animation: l2 1s infinite linear;
+}
+@keyframes l2 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.storeName {
+  border-bottom: 2px solid #4c4a54;
+  width: 90%;
+  @apply ml-14 mt-20 mb-16;
+}
+.storeName:focus-visible {
+  padding-left: 8px;
+  outline: none;
+}
+
+// Register
+
+.registerMainContainer {
+  @apply flex flex-col justify-center items-center m-auto gap-5;
+}
+
+.registerMainTitle {
+  font-family: "Bartender SemiCondensedSans", sans-serif;
+  @apply text-5xl text-[#4C4A54]  text-center font-extrabold tracking-wide;
+}
+.registerMainContaint {
+  font-family: "Figtree SemiBold", sans-serif;
+  @apply text-base font-medium text-center text-[#4C4A54] tracking-[2.01px];
+}
+
+.registerCard {
+  @apply bg-[#EDECF1] bg-center h-screen w-screen flex flex-col justify-center items-center drop-shadow-2xl;
+}
+
+.registerLogo {
+  @apply w-[194.06px] h-[19.93px] mt-4 text-white;
+}
+
+.registerBack {
+  @apply bg-[#4C4A54] w-[165.2px] h-[47.63px] rounded-[7px] text-[#EDECF1] tracking-[2.2px] mt-[65px];
+}
+
+.registerContainer {
+  @apply flex flex-col m-auto bg-white p-2 w-10/12 rounded-3xl;
+}
+
+.registerTitle {
+  font-family: "font-Figtree-SemiBold";
+  @apply text-[#4C4A54] text-lg tracking-[1.52px] mt-10 ml-14;
+}
+
+.registerSelectBox{
+  @apply cursor-pointer mt-3.5 ml-14 border-[1px] border-[#4C4A54] border-solid rounded-[6px] p-3 flex items-center w-72 h-12
+}
+
+.registerSelectLetter {
+  @apply bg-[#4C4A54] w-5 h-5 rounded text-[#EDECF1] text-center text-xs mr-2 flex justify-center items-center;
+}
+
+.registerSelectText{
+  @apply text-xl text-[#4C4A54] font-normal
+}
+
+.registerNext {
+  @apply bg-[#4C4A54] mt-3.5 ml-14 mb-8 w-[88px] h-[48px] rounded-[7px] text-[#EDECF1] tracking-[2.2px] opacity-100;
+}
+
+.registerSingleInput {
+  border-bottom: 2px solid #4c4a54;
+
+  @apply w-11/12 mx-14 mt-20 mb-16;
+}
+
+.registerSingleInput:focus-visible {
+  padding-left: 8px;
+  outline: none;
+}
+.registerMultileInput {
+  border-bottom: 2px solid #4c4a54;
+
+  @apply w-11/12 mx-14 my-8;
+}
+
+.registerMultileInput:focus-visible {
+  padding-left: 8px;
+  outline: none;
+}
+
+.registerInputSpan {
+  @apply text-[#A5A5A5] ml-14;
+}
+
+.city_state {
+  display: flex;
+  margin-right: 6rem;
+  justify-content: space-between;
+}

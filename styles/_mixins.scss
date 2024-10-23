@@ -1,0 +1,32 @@
+@mixin flex($justify: center, $align: center, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+@mixin flex-contain($justify: space-between, $align: center, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+@mixin flexStart($justify: center, $align: center, $direction: row) {
+  display: flex;
+}
+
+.flex-wrapper {
+  @include flex();
+}
+.flex-container {
+  @include flex-contain();
+}
+
+.flex-between {
+  @include flex(space-between);
+}
+.flex-start {
+  @include flexStart();
+}
+.flex-contain {
+  @include flex(space-evenly);
+}

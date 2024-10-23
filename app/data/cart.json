@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "img": "https://res.cloudinary.com/dbrtm8pf6/image/upload/a_ignore,b_white,c_pad,f_auto,g_center,h_600,q_auto,w_600/v1705330822/uploads/c003d69e/products/1413/images/B-40250-Y_1705330819",
+    "code": "E-10254-YG",
+    "name": "A Force To Be Reckoned Stud Earrings",
+    "color": "Gold",
+    "price": "$52.00",
+    "quantity": "100",
+    "discount": "-",
+    "total": "$5,200.00",
+    "category": "bracelets",
+    "subcategory": "Chain Bracelet"
+  },
+  {
+    "id": 2,
+    "img": "https://res.cloudinary.com/dbrtm8pf6/image/upload/a_ignore,b_white,c_pad,f_auto,g_center,h_100,q_80,w_100/v1705333927/uploads/c003d69e/product_images/8700/photos/WS1E-10633_1-Y_1705333925",
+    "code": "E-2021-SV",
+    "name": "Silver Bracelet",
+    "color": "Silver",
+    "price": "$35.00",
+    "quantity": "50",
+    "discount": "-",
+    "total": "$1,750.00",
+    "category": "bracelets",
+    "subcategory": "Chain Bracelet"
+  },
+  {
+    "id": 3,
+    "img": "https://res.cloudinary.com/dbrtm8pf6/image/upload/a_ignore,b_white,c_pad,f_auto,g_center,h_600,q_auto,w_600/v1705330822/uploads/c003d69e/products/1413/images/B-40250-Y_1705330819",
+    "code": "E-3050-RD",
+    "name": "Ruby Necklace",
+    "color": "Red",
+    "price": "$120.00",
+    "quantity": "20",
+    "discount": "-",
+    "total": "$2,400.00",
+    "category": "bracelets",
+    "subcategory": "Chain Bracelet"
+  },
+  {
+    "id": 4,
+    "img": "https://res.cloudinary.com/dbrtm8pf6/image/upload/a_ignore,b_white,c_pad,f_auto,g_center,h_100,q_80,w_100/v1705333927/uploads/c003d69e/product_images/8700/photos/WS1E-10633_1-Y_1705333925",
+    "code": "E-4098-BL",
+    "name": "Sapphire Ring",
+    "color": "Blue",
+    "price": "$90.00",
+    "quantity": "30",
+    "discount": "-",
+    "total": "$2,700.00",
+    "category": "bracelets",
+    "subcategory": "Chain Bracelet"
+  },
+  {
+    "id": 5,
+    "img": "https://res.cloudinary.com/dbrtm8pf6/image/upload/a_ignore,b_white,c_pad,f_auto,g_center,h_600,q_auto,w_600/v1705330822/uploads/c003d69e/products/1413/images/B-40250-Y_1705330819",
+    "code": "E-5501-RG",
+    "name": "Rose Gold Watch",
+    "color": "Rose Gold",
+    "price": "$200.00",
+    "quantity": "10",
+    "discount": "-",
+    "total": "$2,000.00",
+    "category": "bracelets",
+    "subcategory": "Chain Bracelet"
+  }
+]

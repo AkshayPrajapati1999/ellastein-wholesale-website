@@ -1,0 +1,33 @@
+image: node:18
+stages:
+  - test
+  - clone
+
+Run Tests:
+  stage: test
+  script:
+    - echo "test"
+
+Run clone:
+  stage: clone
+  script:
+    - echo "commit done"
+    - apt-get update -qy
+    - apt-get install -y git sshpass
+    - apt-get install zip
+    - apt-get install -y npm
+    - git clone https://Appunik_Akshay:CV5WeDEyS793v3Q@gitlab.appunik-team.com/appunik/frontend/ellastein-wholesale-website.git
+    - cd ellastein-wholesale-website
+    - git fetch
+    - echo "Branch Checkout"
+    - git checkout production-development
+    - npm install --force
+    - npm run build
+    - cd .. && tar -czvf ellastein.tar.gz ellastein-wholesale-website > tar.log 2>&1
+    - echo "tar done"
+    - sshpass -p 'AppUnik12345Qwerty' scp -o StrictHostKeyChecking=no ellastein.tar.gz root@134.209.155.53:/var/www/
+    - echo "scp done"
+    - sshpass -p 'AppUnik12345Qwerty' ssh -o StrictHostKeyChecking=no root@134.209.155.53 'cd /var/www/ && tar -xzvf ellastein.tar.gz' > untar.log 2>&1
+    - echo "Process Completed"
+  only:
+    - production-development
